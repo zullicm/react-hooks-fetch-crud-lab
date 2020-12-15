@@ -19,7 +19,6 @@ export const handlers = [
       return res(ctx.status(404), ctx.json({ message: "Invalid ID" }));
     }
     questions = questions.filter((q) => q.id !== parseInt(id));
-    console.log(questions);
     return res(ctx.json({}));
   }),
   rest.patch("http://localhost:4000/questions/:id", (req, res, ctx) => {
