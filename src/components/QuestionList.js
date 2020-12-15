@@ -13,7 +13,9 @@ function QuestionList() {
   }, []);
 
   function handleDeleteClick(id) {
-    fetch(`http://localhost:4000/questions/${id}`)
+    fetch(`http://localhost:4000/questions/${id}`, {
+      method: "DELETE",
+    })
       .then((r) => r.json())
       .then(() => {
         const updatedQuestions = questions.filter((q) => q.id !== id);
