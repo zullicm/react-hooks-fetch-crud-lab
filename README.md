@@ -30,17 +30,19 @@ When the application loads, get all the questions from
 component.
 
 You'll need to add `useState` and `useEffect` for this deliverable, but it's up
-to you to decide where it belongs! Think about which components will need access to the question data.
+to you to decide where it belongs! Think about which components will need access
+to the question data.
 
 ### POST /questions
 
 When the user clicks the 'New Question' button, a form will be displayed for
 creating a new question. This form is already set up as a controlled form, so
-your responsibility will be to send this form data to our API _when the form is submitted_.
+your responsibility will be to send this form data to our API _when the form is
+submitted_.
 
 For the API to work, you'll need to format your POST request like this:
 
-```
+```txt
 POST /questions
 
 Required Headers:
@@ -53,6 +55,9 @@ Body:
   "correctIndex": integer
 }
 ```
+
+In addition to updating the form, you should display the new question in the
+`QuestionList` component.
 
 **NOTE**: because `json-server` doesn't have any validations, if you make any
 mistakes and send the body of your request in the wrong format, you'll need to
@@ -76,7 +81,7 @@ is changed_, the question should be updated on the server.
 
 For the API to work, you'll need to format your POST request like this:
 
-```
+```txt
 PATCH /questions/:id
 
 Required Headers:
