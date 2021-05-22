@@ -1,4 +1,12 @@
-# React Fetch CRUD Lab
+# Putting it All Together: React Fetch CRUD Lab
+
+## Learning Goals
+
+- Use the `useEffect` hook to fetch data from an API
+- Use event handlers with `fetch` to send data to an API
+- Update state after receiving data from an API
+
+## Introduction
 
 We're going to continue working on our quiz app, this time from the
 administrative side of things! We want our quizmasters to be able to view, add,
@@ -57,7 +65,7 @@ Body:
 ```
 
 In addition to updating the form, you should display the new question in the
-`QuestionList` component.
+`QuestionList` component by updating state.
 
 **NOTE**: because `json-server` doesn't have any validations, if you make any
 mistakes and send the body of your request in the wrong format, you'll need to
@@ -67,8 +75,8 @@ manually delete the entry from the `db.json` file.
 
 When the user clicks the 'View Questions' button, a list of all the questions
 should show up (from deliverable 1). _When the delete button is clicked_, the
-question should be removed from the list. It should _also_ be deleted on the
-server.
+question should be removed from the list by updating state. It should _also_ be
+deleted on the server.
 
 Make sure to include the **id** of the question you're trying to delete in your
 request's url!
@@ -77,7 +85,8 @@ request's url!
 
 When the user clicks the 'View Questions' button, a list of all the questions
 should show up (from deliverable 1). _When the dropdown for the correct answer
-is changed_, the question should be updated on the server.
+is changed_, the question should be updated on the server. It should also be
+updated in state.
 
 For the API to work, you'll need to format your POST request like this:
 
@@ -95,3 +104,11 @@ Body:
 
 Make sure to include the **id** of the question you're trying to update in your
 request's url!
+
+## Resources
+
+- [Using `fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+- [React `fetch` with `useEffect` Example][react ajax]
+- [React State and Arrays](https://github.com/learn-co-curriculum/react-hooks-state-arrays)
+
+[react ajax]: https://reactjs.org/docs/faq-ajax.html#example-using-ajax-results-to-set-local-state
