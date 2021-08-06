@@ -59,6 +59,8 @@ test("creates a new question when the form is submitted", async () => {
 test("deletes the question when the delete button is clicked", async () => {
   const { rerender } = render(<App />);
 
+  fireEvent.click(screen.queryByText(/View Questions/));
+
   await screen.findByText(/lorem testum 1/g);
 
   fireEvent.click(screen.queryAllByText("Delete Question")[0]);
@@ -74,6 +76,8 @@ test("deletes the question when the delete button is clicked", async () => {
 
 test("updates the answer when the dropdown is changed", async () => {
   const { rerender } = render(<App />);
+
+  fireEvent.click(screen.queryByText(/View Questions/));
 
   await screen.findByText(/lorem testum 2/g);
 
