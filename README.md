@@ -88,7 +88,7 @@ should show up (from deliverable 1). _When the dropdown for the correct answer
 is changed_, the question should be updated on the server. It should also be
 updated in state.
 
-For the API to work, you'll need to format your POST request like this:
+For the API to work, you'll need to format your PATCH request like this:
 
 ```txt
 PATCH /questions/:id
